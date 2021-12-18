@@ -1,3 +1,19 @@
+body {
+	background-image: url(/Users/mviswanatibco.com/Downloads/csp-dishes-main-2/src/images/homePgImage.png);
+	background-size: 500px;
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+p {
+    font-size: 23px;
+    width: 40%;
+    text-align: center;
+    background-color: #cddafd;
+    color: white;
+	font-family: monospace;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -8,7 +24,8 @@ ul {
 
 li {
   float: left;
-  border-right:1px solid #cddafd;
+  border-right:1px solid rgb(255, 255, 255);
+  font-family: monospace;
 }
 
 li:last-child {
@@ -78,7 +95,7 @@ li a:hover:not(.active) {
 }
 
 .indiandetail {
-	width: 100%;
+	width: 50%;
 	padding: 25px;
 	background-color: coral;
 	color: white;
