@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Which Dessert Should You Order?.</title>
+<style>
+body {
+background-color: lightblue;
+font-family: Helvetica;
+}
+
+#main {
+width: 60%;
+border: 1px gray solid;
+margin: auto;
+padding: 10px;
+background-color: white;
+border-radius: 10px;
+}
+
+#header {
+margin-top: 0;
+border: 2px solid black;
+padding: 5px;
+height: 250px;
+}
+
+label {
+width: 150px;
+display: inline-block;
+}
+
+button {
+display: block;
+margin-top: 20px;
+
+}
+
+</style>
+</head>
+<body>
+<div id="main">
+<div id="header"><h1>Which Dessert should you order?</h1></div>
+
+<form  id="form1">
+<p> What type of dessert do you want today?</p>
+<label><input type="radio" name="dType" id="Modern" value="1" />A Modern Dessert</label>
+<label><input type="radio" name="dType" id="Traditional" value="3" />A Traditional Dessert</label>
+<label><input type="radio" name="dType" id="Exotic" value="6" />Something Exotic</label>
+
+<p> What flavor sounds the most scumptious</p>
+<label><input type="radio" name="flavor" id="Vanilla" value="1" />Vanilla</label>
+<label><input type="radio" name="flavor" id="Mango" value="2" />Mango </label>
+<label><input type="radio"  name="flavor" id="Pistachio" value="5" />Pistachio</label>
+
+<p>What do you want from your Dessert?</p>
+<label><input type="radio" name="gain" id="simple" value="1" />A simple filling breakfast</label>
+<label><input type="radio" name="gain" id= "medium"   value="3" />Something tasty</label>
+<label><input type="radio" name="gain" id="exotic" value="7" />Something that none of my friends have seen before</label>
+
+
+<button type="submit" value="Submit">Submit</button>
+
+</form>
+
+<p id="answer"></p>
+<p id="answer2"></p>
+</div>
+<script>
+       document.getElementById("form1").onsubmit=function() {
+
+
+    type = parseInt(document.querySelector('input[name = "dType"]:checked').value);
+
+      flavor = parseInt(document.querySelector('input[name = "flavor"]:checked').value);
+
+      gain = parseInt(document.querySelector('input[name = "gain"]:checked').value);
+
+       total= type + flavor + gain;
+
+
+       document.getElementById("answer").innerHTML = total;
+
+       if(total == 3) {
+document.getElementById("answer2").innerHTML = "You should order Whole Grain Citrus Muffin.";
+
+}
+   if(total==4) {
+    document.getElementById("answer2").innerHTML = "You should order Italian Butter Cookies";
+}
+
+    if(total==5) {
+document.getElementById("answer2").innerHTML = "You should order a Canestrelli ";
+}
+if(total==6) {
+document.getElementById("answer2").innerHTML = "You should order a Caramel Flan ";
+}
+if(total==7) {
+document.getElementById("answer2").innerHTML = "You should order a Honey Almond Ricotta Spread ";
+}
+if(total==8) {
+document.getElementById("answer2").innerHTML = "You should order a Thai Coconut Mango Jelly ";
+}
+if(total==9) {
+document.getElementById("answer2").innerHTML = "You should order a Indian Carrot Pudding";
+}
+if(total==10) {
+document.getElementById("answer2").innerHTML = "You should order a Sopapilla Cheesecake Bars";
+}
+if(total==11) {
+document.getElementById("answer2").innerHTML = "You should order a Pastel De Elote";
+}
+if(total==12) {
+document.getElementById("answer2").innerHTML = "You should order a Popped Quinoa Crunch Bar";
+}
+if(total==13) {
+document.getElementById("answer2").innerHTML = "You should order a Tiramisu Ice Cream";
+}
+if(total==14) {
+document.getElementById("answer2").innerHTML = "You should order a Gulab Jamun";
+}
+if(total==15) {
+document.getElementById("answer2").innerHTML = "You should order a Coconut Mango Tapioca Pudding";
+}
+if(total==16) {
+document.getElementById("answer2").innerHTML = "You should order Kaju Katli";
+}
+if(total>=17) {
+document.getElementById("answer2").innerHTML = "You should order a Thai Coconut Icecream";
+}
+
+return false; // required to not refresh the page; just leave this here
+}
+
+</script>
+
+</body>
+</html>
